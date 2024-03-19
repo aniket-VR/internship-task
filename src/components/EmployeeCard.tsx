@@ -6,7 +6,7 @@ export default function EmployeeCard({ item }: { item: Employee }) {
     <div>
       <div
         className={`bg-[#5E5E5E82] py-3 px-2 my-2 relative rounded-2xl ${
-          (item.emp_id as number) % 2 == 0 ? "ml-6" : "mr-6"
+          (item.emp_id as number) % 2 === 0 ? "ml-6" : "mr-6"
         }`}
       >
         <span className="bg-transparent h-[40px] w-[40px] flex items-center justify-center rounded-full text-center m-4 border-black absolute top-0 right-0 border-[1px]">

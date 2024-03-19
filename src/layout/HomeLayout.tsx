@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { ImHome } from "react-icons/im";
 import { FaUser } from "react-icons/fa";
 import { Link, Outlet, useRoutes } from "react-router-dom";
 import logo from "../assets/moptro logo-1@2x.png";
 import callLogo from "../assets/Group 46@2x.png";
-import { useMenuRoute } from "../routes/useMenuRoute";
 import { EmployeeInfo } from "../constant/Employee";
 export default function HomeLayout() {
   const [menuStatus, setMenuStatus] = useState("home");
