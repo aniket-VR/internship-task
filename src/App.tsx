@@ -10,8 +10,8 @@ function App() {
     <>
       <div className="bg-no-repeat bg-transparent bg-gradient-to-r from-[#000000] to-[#000E09]">
         <Routes>
-          <Route path="/" element={<Authentication />}>
-            <Route path="/" element={<HomeLayout />}>
+          <Route element={<Authentication />}>
+            <Route element={<HomeLayout />}>
               <Route path="/" element={<Home />} />
               <Route path="/employee" element={<Employee />} />
             </Route>
