@@ -1,25 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import { Routes, Route } from "react-router-dom";
+import Login from "./pages/Login";
+import Home from "./pages/Home";
+import Employee from "./pages/Employee";
+import HomeLayout from "./layout/HomeLayout";
+import Authentication from "./components/Route/Authentication";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="bg-no-repeat bg-transparent bg-gradient-to-r from-[#000000] to-[#000E09]">
+        <Routes>
+          <Route path="/" element={<Authentication />}>
+            <Route path="/" element={<HomeLayout />}>
+              <Route path="/" element={<Home />} />
+              <Route path="/employee" element={<Employee />} />
+            </Route>
+          </Route>
+          <Route path="/login" element={<Login />} />
+        </Routes>
+      </div>
+    </>
   );
 }
 
